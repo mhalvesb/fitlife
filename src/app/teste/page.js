@@ -1,10 +1,20 @@
+"use client"
+
+import {useState, useEffect} from "react";
 import MyHeader from "../layouts/header";
 import Lists from "../components/lists";
 import MyFooter from "../layouts/footer";
 import MyLi from "../components/liDec";
 export default function Teste({Titulo, TituloDesc, TituloIntroduc, TituloNum, listas, ListAlimentos, capa }){
 
+    const [minhasListas,  definirMinhasListas] = useState([]);
     
+
+    useEffect(() =>{
+        if(listas){
+            definirMinhasListas(listas);
+        }
+    },[]);
 
 
     return(
@@ -23,14 +33,14 @@ export default function Teste({Titulo, TituloDesc, TituloIntroduc, TituloNum, li
                     <h1 className="text-base sm:text-base md:text-base xl:text-2xl font-bold Poppins mt-6">{TituloNum}</h1>
                     <p className="text-xs sm:text-sm lg:text-base xl:text-lg font-semibold mt-2 text-neutral-700 dosis">{TituloIntroduc}</p>
                     <ul className="sm:mt-4 xl:pl-2 xl:pb-10">
-                        {listas.map((item, index) =>{
+                        {minhasListas?.map((item, index) =>{
                             return(
                                 <MyLi key={index} name={item.name} number={item.number}/>
                             )
                         })}
                     </ul>
                     
-                    {ListAlimentos.map((item, index) =>{
+                    {ListAlimentos?.map((item, index) =>{
                         return(
                             <Lists key={index} descriptionName={item.descriptionName} comoConsumir={item.comoConsumir} imageList={item.imageList} listName={item.listName} beneficios={item.beneficios}/>
                         )
