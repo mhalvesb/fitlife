@@ -8,11 +8,14 @@ import MyLi from "../components/liDec";
 export default function Teste({Titulo, TituloDesc, TituloIntroduc, TituloNum, listas, ListAlimentos, capa }){
 
     const [minhasListas,  definirMinhasListas] = useState([]);
-    
+    const [listasAlimentos, definirListasAlimentos] = useState([]);
 
     useEffect(() =>{
         if(listas){
             definirMinhasListas(listas);
+        }
+        if(ListAlimentos){
+            definirListasAlimentos(ListAlimentos);
         }
     },[]);
 
@@ -40,7 +43,7 @@ export default function Teste({Titulo, TituloDesc, TituloIntroduc, TituloNum, li
                         })}
                     </ul>
                     
-                    {ListAlimentos?.map((item, index) =>{
+                    {listasAlimentos?.map((item, index) =>{
                         return(
                             <Lists key={index} descriptionName={item.descriptionName} comoConsumir={item.comoConsumir} imageList={item.imageList} listName={item.listName} beneficios={item.beneficios}/>
                         )
