@@ -90,7 +90,7 @@ export default function MyMain({category}){
                 titleName="8 Melhores alimentos para emagrecer" 
                 descriptionName="Os melhores 
                 alimentos para emagrecer consistem em alimentos de baixa caloria como, verduras, frutas, alimentos leves..."
-                webAdd={"http://localhost:3000/alimentos/oitoalimentos"}
+                webAdd={"/alimentos/oitoalimentos"}
                 />: ""
                 }
 
@@ -98,7 +98,7 @@ export default function MyMain({category}){
                 titleName="Alimentos para o bom funcionamento do coração" 
                 descriptionName="Alimentos 
                 para o bom funcionamentos do coração consiste em alimentos de baixo sódio e de gorduras boas..."
-                webAdd={"http://localhost:3000/alimentos/alimentosparacor"}
+                webAdd={"/alimentos/alimentosparacor"}
                 /> : ""
                 }
 
@@ -106,7 +106,7 @@ export default function MyMain({category}){
                 titleName="Como evitar gordura no sangue" 
                 descriptionName="Venha conferir como
                 diminuir a sua gordura no sangue e manter uma vida mais saúdavel..."
-                webAdd={"http://localhost:3000/saude/evitargorduranosangue"}
+                webAdd={"/saude/evitargorduranosangue"}
                 /> : ""
                 }
 
@@ -114,7 +114,7 @@ export default function MyMain({category}){
                 titleName="Melhores exercicios para emagrecer"
                 descriptionName="Os exercicios de emagrecimentos consiste em exercicios aonde se costuma gastar bastante
                 calorias...."
-                webAdd={"http://localhost:3000/fitness/exerciciosparaemagrecer"}
+                webAdd={"/fitness/exerciciosparaemagrecer"}
                 /> : ""
                 }
         </main>

@@ -30,7 +30,7 @@ export default function MyHeader(){
     } 
 
     const goToMainPage = () =>{
-      router.push("http://localhost:3000");
+      router.push("/");
     }
 
     
