@@ -48,7 +48,6 @@ export default function Teste({Titulo, TituloDesc, TituloIntroduc, TituloNum, li
                             <Lists key={index} descriptionName={item.descriptionName} comoConsumir={item.comoConsumir} imageList={item.imageList} listName={item.listName} beneficios={item.beneficios}/>
                         )
                     })}
-
                 </div>
                 
                 
